@@ -7,11 +7,11 @@
       <div class="mb-3">
         <input formControlName="title" placeholder="Titulo (*)" class="form-control mb-2" />
         <div *ngIf="taskForm.get('title')?.invalid && taskForm.get('title')?.touched" class="text-danger">
-          El título es obligatorio.
+          El título es obligatorio y no debe exceder los 100 caracteres.
         </div>
         <textarea formControlName="description" placeholder="Descripcion (*)" class="form-control"></textarea>
         <div *ngIf="taskForm.get('description')?.invalid && taskForm.get('description')?.touched" class="text-danger">
-          La descripcion es obligatoria.
+          La descripcion es obligatoria y no debe exceder los 255 caracteres.
         </div>
       </div>
       <button type="submit" class="btn btn-primary w-100" [disabled]="taskForm.invalid">Agregar Tarea</button>

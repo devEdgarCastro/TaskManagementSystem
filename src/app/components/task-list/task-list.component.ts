@@ -31,8 +31,8 @@ export class TaskListComponent implements OnInit, OnDestroy {
 
   constructor(private readonly taskService: TaskService, private readonly fb: FormBuilder) {
     this.taskForm = this.fb.group({
-      title: ['', Validators.required],
-      description: ['', Validators.required],
+      title: ['', [Validators.required, Validators.maxLength(100)]],
+      description: ['', [Validators.required, Validators.maxLength(255)]],
       status: [TODO]
     });
   }
