@@ -1,0 +1,7 @@
+header {
+  background: linear-gradient(135deg, #007bff, #011d3b);
+}
+
+header h1 {
+  letter-spacing: 1px;
+}
